@@ -8,7 +8,9 @@ RUN yum install httpd httpd-tools php php-mysql php-devel php-gd php-pecl-memcac
 
 EXPOSE  80
 
-COPY html /var/www/
+WORKDIR /var/www
+
+COPY html .
 
 COPY httpd.conf /etc/httpd/conf/
 
