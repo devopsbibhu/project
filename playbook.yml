@@ -1,0 +1,21 @@
+---
+- name: Install chromium
+  gather_facts: No
+  hosts: 192.168.31.182
+  become: true
+
+  tasks:
+    - name: Install chromium
+      yum:
+        name: chromium
+        state: latest
+
+    - name: Install chromedriver
+      yum:
+        name: chromedriver
+        state: latest
+
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: latest
