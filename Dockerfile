@@ -20,9 +20,5 @@ RUN pwd
 
 COPY httpd.conf .
 
-WORKDIR /etc/httpd/conf.d/
-
-COPY welcome.conf .
-
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 
